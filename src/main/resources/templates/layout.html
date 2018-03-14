@@ -69,9 +69,14 @@
 
 
     <footer>
-        <p class="pull-right" th:if="${g_user}">
+        
+        <nav class="navbar navbar-default navbar-bottom" role="navigation">
+  <div class="container">
+    <p class="pull-right" th:if="${g_user}">
             Logged in as: <span th:text="${g_user.email}">my email</span>
         </p>
+  </div>
+</nav>
     </footer>
 </body>
 </html>
