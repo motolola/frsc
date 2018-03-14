@@ -24,6 +24,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -180,7 +181,6 @@ public class UserController {
         userService.autoLogin(user.getUserName());
         return "redirect:/";
     }
-
     
     @RequestMapping("/user/edit/{id}")
     public String edit(@PathVariable("id") Long id, User user) {
@@ -268,5 +268,10 @@ public class UserController {
         } else {
             return null;
         }
+    }
+    
+    @GetMapping("user/profile")
+    public String getProfile() {
+    	return "user/profile";
     }
 }

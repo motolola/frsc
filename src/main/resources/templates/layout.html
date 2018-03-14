@@ -7,6 +7,8 @@
     
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+    
     
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
@@ -19,7 +21,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">UK Swing</a>
+                <a class="navbar-brand" href="#"><i class="fa fa-home"></i> UK Swing</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -38,10 +40,12 @@
 
             <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
 
-                <ul class="nav nav-sidebar">
+                <ul class="nav nav-sidebar" th:if="${g_user}">
                     <li th:class="${#httpServletRequest.requestURI=='/'}? active"><a th:href="@{/}" href="/">Home</a></li>
+                    <li><a href="/user/profile">Profile</a></li>
                     <li th:class="${#httpServletRequest.requestURI=='/user/list'}? active"><a th:href="@{/user/list}" href="user/list">User List</a></li>
                     <li th:class="${#strings.startsWith(#httpServletRequest.requestURI,'/user/edit')}  ? active"><a th:href="@{/user/edit/0}" href="user/list">Edit user</a></li>
+                    <li><a href="/message/inbox">Inbox</a></li>
                 </ul>
 
             </div>
