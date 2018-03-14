@@ -1,10 +1,10 @@
-package app.services;
+package io.motolola.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import app.models.Sample;
-import app.repositories.SampleRepository;
+import io.motolola.models.Sample;
+import io.motolola.repositories.SampleRepository;
 
 @Service
 public class SampleService extends CrudService<Sample, SampleRepository> {

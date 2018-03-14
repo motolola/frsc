@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package app;
+package io.motolola;
 
 import java.util.Date;
 import java.util.Map;

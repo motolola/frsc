@@ -1,11 +1,11 @@
-package app.adapters;
+package io.motolola.adapters;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.event.InteractiveAuthenticationSuccessEvent;
 
-import app.services.UserService;
+import io.motolola.services.UserService;
 
 @Configuration
 public class LoginAdapter implements ApplicationListener<InteractiveAuthenticationSuccessEvent> {

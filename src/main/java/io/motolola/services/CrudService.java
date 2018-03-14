@@ -1,9 +1,9 @@
-package app.services;
+package io.motolola.services;
 
 import org.springframework.data.repository.CrudRepository;
 
 
-public abstract class CrudService<M extends app.models.Model, R extends CrudRepository<M, Long>> {
+public abstract class CrudService<M extends io.motolola.models.Model, R extends CrudRepository<M, Long>> {
     R repo;
     
     public abstract void setRepo(R repo);

@@ -1,4 +1,4 @@
-package app.adapters;
+package io.motolola.adapters;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

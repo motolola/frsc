@@ -1,4 +1,4 @@
-package app.models;
+package io.motolola.models;
 
 import java.sql.Timestamp;
 import java.util.Date;

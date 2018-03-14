@@ -1,4 +1,4 @@
-package app.services;
+package io.motolola.services;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import app.Application;
-import app.models.User;
-import app.repositories.UserRepository;
+import io.motolola.Application;
+import io.motolola.models.User;
+import io.motolola.repositories.UserRepository;
 
 @Service
 public class UserService implements UserDetailsService {

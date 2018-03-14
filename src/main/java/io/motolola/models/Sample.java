@@ -1,4 +1,4 @@
-package app.models;
+package io.motolola.models;
 
 import javax.persistence.Entity;
 

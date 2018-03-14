@@ -1,4 +1,4 @@
-package app.adapters;
+package io.motolola.adapters;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import app.services.UserService;
+import io.motolola.services.UserService;
 
 @Configuration
 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
@@ -35,6 +35,7 @@ public class ApplicationSecurityAdapter extends WebSecurityConfigurerAdapter {
         .antMatchers("/user/reset-password-change").permitAll()
         .antMatchers("/user/autologin").access("hasRole('ROLE_ADMIN')")
         .antMatchers("/user/delete").access("hasRole('ROLE_ADMIN')")
+        .antMatchers("/user/list").access("hasRole('ROLE_ADMIN')")
         .antMatchers("/img/**").permitAll()
         .antMatchers("/images/**").permitAll()
         .antMatchers("/fonts/**").permitAll()

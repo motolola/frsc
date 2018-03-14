@@ -1,4 +1,4 @@
-package app.controllers;
+package io.motolola.controllers;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -32,10 +32,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import app.models.User;
-import app.repositories.UserRepository;
-import app.services.MailService;
-import app.services.UserService;
+import io.motolola.models.User;
+import io.motolola.repositories.UserRepository;
+import io.motolola.services.MailService;
+import io.motolola.services.UserService;
 
 @Controller
 // @RequestMapping("/user/*")

@@ -1,4 +1,4 @@
-package app.controllers;
+package io.motolola.controllers;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.ui.ModelMap;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import app.models.Model;
-import app.services.CrudService;
+import io.motolola.models.Model;
+import io.motolola.services.CrudService;
 
 @RestController
 public abstract class CrudController<M extends Model, S extends CrudService<M, ? extends CrudRepository<M,Long>>> {

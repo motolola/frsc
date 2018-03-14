@@ -1,4 +1,4 @@
-package app.adapters;
+package io.motolola.adapters;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import app.services.UserService;
+import io.motolola.services.UserService;
 
 @Configuration
 public class ViewInterceptorAdapter extends HandlerInterceptorAdapter {

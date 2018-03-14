@@ -1,4 +1,4 @@
-package app.adapters;
+package io.motolola.adapters;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import app.models.User;
-import app.services.MailService;
-import app.services.UserService;
+import io.motolola.models.User;
+import io.motolola.services.MailService;
+import io.motolola.services.UserService;
 
 @ControllerAdvice
 class ExceptionAdapter {

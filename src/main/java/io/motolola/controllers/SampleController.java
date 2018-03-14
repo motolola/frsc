@@ -1,11 +1,11 @@
-package app.controllers;
+package io.motolola.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import app.models.Sample;
-import app.services.SampleService;
+import io.motolola.models.Sample;
+import io.motolola.services.SampleService;
 
 @RestController
 @RequestMapping("/sample")
