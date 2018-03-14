@@ -62,6 +62,10 @@ public class UserController {
 
     @RequestMapping("/login")
     public String login(User user) {
+    	
+	    	if(userService.getLoggedInUser() != null) {
+	    		return "redirect:/";
+	    	}
         return "user/login";
     }
 
