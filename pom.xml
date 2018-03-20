@@ -6,10 +6,10 @@
     <groupId>io.motolola</groupId>
     <artifactId>network</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
-    <name>People Network Application</name>
-    <description>Dating Application for grown ups</description>
+    <name>frsc</name>
+    <description>FRSC</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
