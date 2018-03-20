@@ -1,4 +1,4 @@
-package io.motolola.controllers;
+package ng.gov.frsc.controllers;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
@@ -33,10 +33,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import io.motolola.models.User;
-import io.motolola.repositories.UserRepository;
-import io.motolola.services.MailService;
-import io.motolola.services.UserService;
+import ng.gov.frsc.models.User;
+import ng.gov.frsc.repositories.UserRepository;
+import ng.gov.frsc.services.MailService;
+import ng.gov.frsc.services.UserService;
 
 @Controller
 // @RequestMapping("/user/*")
@@ -274,4 +274,5 @@ public class UserController {
     public String getProfile() {
     	return "user/profile";
     }
+    
 }

@@ -1,4 +1,4 @@
-package io.motolola.controllers;
+package ng.gov.frsc.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping("/message/")
-public class MemberMessageController {
+@RequestMapping("/message")
+public class SmsController {
 	
 	@GetMapping("/inbox")
 	public String getMyMessage(){
-		return "message/inbox";
+		return "sms/inbox";
+	}
+	
+	@GetMapping("/sms-reminder")
+	public String smsReminder() {
+		return "sms/reminder";
 	}
 
 }

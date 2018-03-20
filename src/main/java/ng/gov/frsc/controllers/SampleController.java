@@ -1,11 +1,11 @@
-package io.motolola.controllers;
+package ng.gov.frsc.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.motolola.models.Sample;
-import io.motolola.services.SampleService;
+import ng.gov.frsc.models.Sample;
+import ng.gov.frsc.services.SampleService;
 
 @RestController
 @RequestMapping("/sample")

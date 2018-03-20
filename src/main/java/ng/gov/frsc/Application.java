@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.motolola;
+package ng.gov.frsc;
 
 import java.util.Date;
 import java.util.Map;

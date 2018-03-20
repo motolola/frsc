@@ -5,10 +5,58 @@
 </head>
 <body>
     <div layout:fragment="content">
-        <h1>Welcome to UK Swing</h1>
-        Index.html file, please your content here
-        <p>Check out the sample @RestController <a href="/sample/json">SampleController.java</a> but create some data first <a href="/sample/create?name=test">SampleController.java</a></p>
-        <div id="created" th:text="${#dates.format(date)}">May 11, 2015</div>
+        <h1>Driver, Welcome to your FRSC profile page</h1>
+        <p>As we are committed to delivering first class services, you will be able to manage your licensing issue on this portal</p>
+        
+		<div class="panel panel-primary">
+		 <div class="panel-heading">License Holder Information</div>
+		  <div class="panel-body">
+		  
+		  		<div class="row">
+				  <div class="col-sm-2">
+				  <img src="https://shawnmubiru.files.wordpress.com/2014/09/nandala-passport.jpg" alt="Driver Picture" width="180" height="180" />
+				  
+				  </div>
+				  <div class="col-sm-5">
+				  
+				  
+				  <table class="table">
+				  
+				  <thead>
+				    <tr><th colspan="2"> <i class="fa fa-address-card" aria-hidden="true"></i>
+				     Personal Information</th></tr>
+				  </thead>
+				  <tr><th> <i class="fa fa-user" aria-hidden="true"></i> First Name</th><td>Akinjide</td></tr>
+				  <tr><th> <i class="fa fa-user" aria-hidden="true"></i> Surname</th><td>Agboola</td></tr>
+				  <tr><th> <i class="fa fa-user" aria-hidden="true"></i> Middle name</th><td>Motolola</td></tr>
+				  <tr><th> <i class="fa fa-calendar" aria-hidden="true"></i> Birth date</th><td>21-10-1981</td></tr>
+				  <tr><th>Nationality</th><td>Nigerian</td></tr>
+				  <tr><th>Address</th><td>12, Abayomi Street, Oshodi, Lagos</td></tr>
+				  
+				  
+				  
+				  </table>
+				  
+				  </div>
+				  <div class="col-sm-5">
+				  <table class="table">
+				  
+				  <thead><tr colspan="2"><th> <i class="fa fa-info" aria-hidden="true"></i>
+				   License Information</th></tr></thead>
+				  <tr><th>License Number</th><td>455533673777377</td></tr>
+				  <tr><th> <i class="fa fa-calendar" aria-hidden="true"></i> First Issue Date</th><td>12-03-2012</td></tr>
+				  <tr><th> <i class="fa fa-calendar" aria-hidden="true"></i> Expiry Date</th><td>12-03-2020</td></tr>
+				  <tr><th>Nationality</th><td>Nigerian</td></tr>
+				  
+				  </table>
+				  
+				  </div>
+				</div>
+		  </div>
+		  <div class="panel-footer" id="created" th:text="${#dates.format(date)}">May 11, 2015</div>
+        </div>
+        
+     
     </div>
 </body>
 </html>

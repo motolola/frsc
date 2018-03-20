@@ -1,4 +1,4 @@
-package io.motolola.services;
+package ng.gov.frsc.services;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import io.motolola.Application;
-import io.motolola.models.User;
-import io.motolola.repositories.UserRepository;
+import ng.gov.frsc.Application;
+import ng.gov.frsc.models.User;
+import ng.gov.frsc.repositories.UserRepository;
 
 @Service
 public class UserService implements UserDetailsService {

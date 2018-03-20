@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
 <head>
-    <title>Layout</title>
+    <title>Federal Road Safety Corps</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    
     <link href="/css/styles.css" rel="stylesheet" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     
     
     <script src="/js/jquery.min.js"></script>
@@ -21,13 +23,13 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><i class="fa fa-home"></i> UK Swing</a>
+                <a class="navbar-brand" href="#"><i class="fa fa-home"></i> Federal Road Safety Corps</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li th:unless="${g_user}"><a th:href="@{/user/reset-password}" href="reset">Reset Password</a></li>
                     <li th:unless="${g_user}"><a th:href="@{/user/register}" href="register">Register</a></li>
-                    <li th:unless="${g_user}"><a th:href="@{/login}" href="login">Login</a></li>
+                    <li th:unless="${g_user}"><a th:href="@{/login}" href="login"><i class="fa fa-sign-in"></i> Login</a></li>
                     <li th:if="${g_user}"><a th:href="@{/logout}" href="logout"><i class="icon-chevron-left"></i>Logout</a></li>
                 </ul>
             </div>
@@ -44,10 +46,10 @@
                     <li th:class="${#httpServletRequest.requestURI=='/'}? active"><a th:href="@{/}" href="/">Home</a></li>
                     <li><a href="/user/profile">Profile</a></li>
                     <li th:class="${#httpServletRequest.requestURI=='/user/list'}? active"><a th:href="@{/user/list}" href="user/list">User List</a></li>
-                    <li th:class="${#strings.startsWith(#httpServletRequest.requestURI,'/user/edit')}  ? active"><a th:href="@{/user/edit/0}" href="user/list">Edit user</a></li>
-                    <li><a href="/message/inbox">Inbox</a></li>
+                    <li th:class="${#strings.startsWith(#httpServletRequest.requestURI,'/user/edit')}  ? active"><a th:href="@{/user/edit/0}" href="user/list">Manage Profile</a></li>
+                    <li><a href="/message/sms-reminder">SMS Reminder</a></li>
+                    <li><a href="/vehicle/vehicles">My Vehicles</a></li>
                 </ul>
-
             </div>
             <!--/span-->
 

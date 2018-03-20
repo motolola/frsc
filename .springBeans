@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:io.motolola.Application</config>
+		<config>java:ng.gov.frsc.Application</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

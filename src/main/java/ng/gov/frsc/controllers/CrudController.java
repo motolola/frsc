@@ -1,4 +1,4 @@
-package io.motolola.controllers;
+package ng.gov.frsc.controllers;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.ui.ModelMap;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.motolola.models.Model;
-import io.motolola.services.CrudService;
+import ng.gov.frsc.models.Model;
+import ng.gov.frsc.services.CrudService;
 
 @RestController
 public abstract class CrudController<M extends Model, S extends CrudService<M, ? extends CrudRepository<M,Long>>> {

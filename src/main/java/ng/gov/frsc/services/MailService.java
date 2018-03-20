@@ -1,4 +1,4 @@
-package io.motolola.services;
+package ng.gov.frsc.services;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,7 +8,7 @@ import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
-import io.motolola.models.User;
+import ng.gov.frsc.models.User;
 
 @Service
 public class MailService {

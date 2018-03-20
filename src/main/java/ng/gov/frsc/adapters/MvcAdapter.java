@@ -1,4 +1,4 @@
-package io.motolola.adapters;
+package ng.gov.frsc.adapters;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package io.motolola.models;
+package ng.gov.frsc.models;
 
 import javax.persistence.Entity;
 

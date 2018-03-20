@@ -1,4 +1,4 @@
-package io.motolola.adapters;
+package ng.gov.frsc.adapters;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import io.motolola.models.User;
-import io.motolola.services.MailService;
-import io.motolola.services.UserService;
+import ng.gov.frsc.models.User;
+import ng.gov.frsc.services.MailService;
+import ng.gov.frsc.services.UserService;
 
 @ControllerAdvice
 class ExceptionAdapter {
