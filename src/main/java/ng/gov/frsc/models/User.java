@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.Email;
 
 
 @Entity
-@Table(name="user", schema = "frsc")
+@Table(name="\"user\"")
 public class User {
     //@GeneratedValue
     //@Id
