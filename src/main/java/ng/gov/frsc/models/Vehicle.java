@@ -91,4 +91,11 @@ public class Vehicle {
 	public Long getId() {
 		return id;
 	}
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + ", regNumber=" + regNumber + ", chassisNumber=" + chassisNumber + ", make=" + make
+				+ ", model=" + model + ", year=" + year + ", colour=" + colour + ", registeredDate=" + registeredDate
+				+ "]";
+	}
+	
 }
