@@ -26,6 +26,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -182,7 +183,7 @@ public class UserController {
         return "redirect:/";
     }
     
-    @RequestMapping("/user/edit/{id}")
+    @GetMapping("/user/edit/{id}")
     public String edit(@PathVariable("id") Long id, User user) {
         User u;
         User loggedInUser = userService.getLoggedInUser();
@@ -207,7 +208,7 @@ public class UserController {
         return "/user/edit";
     }
     
-    @RequestMapping(value = "/user/edit", method = RequestMethod.POST)
+    @PostMapping(value = "/user/edit")
     public String editPost(@Valid User user, BindingResult result) {
         if (result.hasFieldErrors("email")) {
             return "/user/edit";
