@@ -20,7 +20,7 @@ public abstract class Model {
     //private Long id;
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "enhanced_table_seq_gen")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "enhanced_table_seq_gen")
     @GenericGenerator(name = "enhanced_table_seq_gen", strategy = "org.hibernate.id.enhanced.TableGenerator",
             parameters = {
                     @org.hibernate.annotations.Parameter(name = "table_name", value = "lib_sequences"),
