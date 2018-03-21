@@ -205,13 +205,13 @@ public class UserController {
         user.setFirstName(u.getFirstName());
         user.setLastName(u.getLastName());
         
-        return "/user/edit";
+        return "user/edit";
     }
     
     @PostMapping(value = "/user/edit")
     public String editPost(@Valid User user, BindingResult result) {
         if (result.hasFieldErrors("email")) {
-            return "/user/edit";
+            return "user/edit";
         }
         
         if(userService.getLoggedInUser().isAdmin()) {
