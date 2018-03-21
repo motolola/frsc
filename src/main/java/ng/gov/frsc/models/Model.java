@@ -3,6 +3,7 @@ package ng.gov.frsc.models;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,7 +27,8 @@ public abstract class Model {
                     @org.hibernate.annotations.Parameter(name = "segment_column_name", value = "name"),
                     @org.hibernate.annotations.Parameter(name = "segment_value", value = "users_seq"),
                     @org.hibernate.annotations.Parameter(name = "value_column_name", value = "next_val")})
-    private Long id;
+	@Column(name = "id")
+	private Long id;
 
     private Date dateCreated;
 

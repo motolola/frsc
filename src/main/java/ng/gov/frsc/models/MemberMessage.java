@@ -1,5 +1,6 @@
 package ng.gov.frsc.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,8 @@ public class MemberMessage {
                     @org.hibernate.annotations.Parameter(name = "segment_column_name", value = "name"),
                     @org.hibernate.annotations.Parameter(name = "segment_value", value = "users_seq"),
                     @org.hibernate.annotations.Parameter(name = "value_column_name", value = "next_val")})
-        private Long id;
+	@Column(name = "id")    
+	private Long id;
 	    
 	    @NotNull
 	    @Size(min = 3, max = 100, message = "Subject must at least 3 characters.")
