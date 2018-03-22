@@ -40,7 +40,13 @@ public class VehicleController {
 	    	 return "vehicle/details";
 	}
 	
-	@PostMapping("add")
+	@GetMapping("vehicle/add")
+	public String addVehicle(Vehicle vehicle) {
+		
+		return "vehicle/add";
+	}
+	
+	@PostMapping("vehicle/add")
 	public String addVehicle(@Valid Vehicle vehicle, BindingResult result) {
 		if (result.hasFieldErrors("email")) {
             return "vehicle/add";
