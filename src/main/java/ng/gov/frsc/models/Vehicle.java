@@ -34,7 +34,7 @@ public class Vehicle extends Model {
 	private String colour;
 	private Date registeredDate;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne()
     @JoinColumn(name = "user_id")
     private User user;
 	

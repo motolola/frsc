@@ -1,6 +1,8 @@
 package ng.gov.frsc.controllers;
 
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,7 @@ public class VehicleController {
 	 @GetMapping("/vehicle/vehicles")
 	 public String myVehicles(ModelMap map) {
 		 User user = userService.getLoggedInUser();
-		 Iterable<Vehicle> vehicles = user.getVehicles();
+		 List<Vehicle> vehicles = user.getVehicles();
 		 //System.out.println(user.toString());
 		 map.addAttribute("vehicles", vehicles);
 	    	 return "vehicle/list";

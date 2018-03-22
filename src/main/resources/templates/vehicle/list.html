@@ -19,16 +19,10 @@
 				  <div class="col-sm-4">
 				  
 				  <table class="table">
-				  <tbody>
-				  <th:block th:each="vehicle : ${vehicles}">
-				 
-					  <tr>
-				        <td th:text="${vehicle.regNumber}">Reg</td>
-				        <td th:text="${vehicle.chassisNumber}">Chass</td>
+					  <tr th:each="vehicle : ${vehicles}">
+				        <td th:text="${vehicle.regNumber}">...</td>
+				        <td th:text="${vehicle.chassisNumber}">...</td>
       				</tr>	
-      				</th:block>	
-      				</tbody>	  
-				  
 				  </table>
 				  
 				  </div>
