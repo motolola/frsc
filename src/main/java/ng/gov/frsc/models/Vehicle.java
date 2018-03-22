@@ -53,6 +53,13 @@ public class Vehicle extends Model {
 		this.colour = colour;
 		this.registeredDate = registeredDate;
 	}
+	
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
 	public String getRegNumber() {
 		return regNumber;
 	}

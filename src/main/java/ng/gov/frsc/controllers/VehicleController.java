@@ -2,11 +2,15 @@ package ng.gov.frsc.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import ng.gov.frsc.models.Model;
 import ng.gov.frsc.models.User;
@@ -34,6 +38,19 @@ public class VehicleController {
 		Vehicle vehicle = vehicleService.get(id);
 		map.addAttribute("vehicle", vehicle);
 	    	 return "vehicle/details";
+	}
+	
+	@PostMapping("add")
+	public String addVehicle(@Valid Vehicle vehicle, BindingResult result) {
+		if (result.hasFieldErrors("email")) {
+            return "vehicle/add";
+        }
+		
+		User user = userService.getLoggedInUser();
+		vehicle.setUser(user);
+		vehicleService.save(vehicle);
+		
+		return "redirect:vehicle/vehicles";
 	}
 
 }
