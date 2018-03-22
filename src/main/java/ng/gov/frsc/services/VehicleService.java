@@ -29,5 +29,9 @@ public class VehicleService extends CrudService<Vehicle, VehicleRepository> {
 		Vehicle vehicle = repo.findById(id);
 		return vehicle;
     }
+	@Override
+	 public Vehicle save(Vehicle vehicle) {
+        return repo.save(vehicle);
+    }
 
 }

@@ -1,6 +1,5 @@
 package ng.gov.frsc.controllers;
 
-import java.util.List;
 
 import javax.validation.Valid;
 
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import ng.gov.frsc.models.Model;
 import ng.gov.frsc.models.User;
 import ng.gov.frsc.models.Vehicle;
 import ng.gov.frsc.services.UserService;
@@ -29,7 +27,8 @@ public class VehicleController {
 	 @GetMapping("/vehicle/vehicles")
 	 public String myVehicles(ModelMap map) {
 		 User user = userService.getLoggedInUser();
-		 List<Vehicle> vehicles = user.getVehicles();
+		 Iterable<Vehicle> vehicles = user.getVehicles();
+		 //System.out.println(user.toString());
 		 map.addAttribute("vehicles", vehicles);
 	    	 return "vehicle/list";
 	 }
@@ -37,6 +36,8 @@ public class VehicleController {
 	public String vehicleDetail(@PathVariable("id") Long id, ModelMap map) {
 		Vehicle vehicle = vehicleService.get(id);
 		if (vehicle != null) {
+			
+			
 		
 	    	 return "vehicle/details";
 		}
@@ -58,8 +59,9 @@ public class VehicleController {
 		User user = userService.getLoggedInUser();
 		vehicle.setUser(user);
 		vehicleService.save(vehicle);
+		System.out.println(vehicle);
 		
-		return "redirect:vehicle/vehicles";
+		return "redirect:/vehicle/vehicles";
 	}
 
 }

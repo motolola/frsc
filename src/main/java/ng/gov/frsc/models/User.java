@@ -74,7 +74,7 @@ public class User {
             mappedBy = "user", 
             cascade = CascadeType.ALL
         )
-    private List<Vehicle> vehicles = new ArrayList<>();
+    private List<Vehicle> vehicles;
     
     public List<Vehicle> getVehicles() {
 		return vehicles;

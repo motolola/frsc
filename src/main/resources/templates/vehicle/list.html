@@ -19,10 +19,15 @@
 				  <div class="col-sm-4">
 				  
 				  <table class="table">
+				  <tbody>
+				  <th:block th:each="vehicle : ${vehicles}">
 				 
-					  <tr><th><a href="/vehicle/vehicle-detail">SE456KJA</a></th><td>Toyota, Corolla, 2010</td></tr>
-					  <tr><th><a href="/vehicle/vehicle-detail">RS678TYR</a></th><td>Mercedes Benz, C-CLass, 2014</td></tr>
-					  <tr><th><a href="/vehicle/vehicle-detail">TD892BGM</a></th><td>BMW, 5-Series</td></tr>				  
+					  <tr>
+				        <td th:text="${vehicle.regNumber}">Reg</td>
+				        <td th:text="${vehicle.chassisNumber}">Chass</td>
+      				</tr>	
+      				</th:block>	
+      				</tbody>	  
 				  
 				  </table>
 				  
@@ -32,7 +37,13 @@
 				  
 				  </div>
 				</div>
-		  <div class="panel-footer">Panel Footer</div>
+		  <div class="panel-footer">
+		  <div class="row">
+		  <div class="col-sm-6"><a href="/vehicle/add"><button class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Add Vehicle</button></a></div>
+		  <div class="col-sm-6"></div>
+		  </div>
+		  
+		  </div>
         </div>
         
         
