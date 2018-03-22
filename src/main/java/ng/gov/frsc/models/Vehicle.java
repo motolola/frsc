@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,7 +23,6 @@ public class Vehicle {
                     @org.hibernate.annotations.Parameter(name = "value_column_name", value = "next_val")})
 	@Column(name = "id")
 	private Long id;
-	
 	private String regNumber;
 	private String chassisNumber;
 	private String make;
@@ -33,14 +30,13 @@ public class Vehicle {
 	private String year;
 	private String colour;
 	private Date registeredDate;
-	private User user;
 	
 	
 	public Vehicle() {
 		
 	}
 	public Vehicle(String regNumber, String chassisNumber, String make, String model, String year, String colour,
-			Date registeredDate, User user) {
+			Date registeredDate) {
 		super();
 		this.regNumber = regNumber;
 		this.chassisNumber = chassisNumber;
@@ -49,15 +45,6 @@ public class Vehicle {
 		this.year = year;
 		this.colour = colour;
 		this.registeredDate = registeredDate;
-		this.user = user;
-	}
-	@ManyToOne
-    @JoinColumn(name = "user_id")
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
 	}
 	public String getRegNumber() {
 		return regNumber;
@@ -110,6 +97,5 @@ public class Vehicle {
 				+ ", model=" + model + ", year=" + year + ", colour=" + colour + ", registeredDate=" + registeredDate
 				+ "]";
 	}
-	
 	
 }

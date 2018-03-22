@@ -1,14 +1,10 @@
 package ng.gov.frsc.models;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
@@ -21,6 +17,9 @@ import org.hibernate.validator.constraints.Email;
 @Entity
 @Table(name="\"user\"")
 public class User {
+    //@GeneratedValue
+    //@Id
+    //private Long id;
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "enhanced_table_seq_gen")
@@ -64,18 +63,7 @@ public class User {
     
     private String profilePicture;
     
-    private Set<Vehicle> vehicles;
-    
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    public Set<Vehicle> getVehicles() {
-		return vehicles;
-	}
-
-	public void setVehicles(Set<Vehicle> vehicles) {
-		this.vehicles = vehicles;
-	}
-
-	public Long getId() {
+    public Long getId() {
         return id;
     }
     
