@@ -76,7 +76,15 @@ public class User {
         )
     private List<Vehicle> vehicles = new ArrayList<>();
     
-    public Long getId() {
+    public List<Vehicle> getVehicles() {
+		return vehicles;
+	}
+
+	public void setVehicles(List<Vehicle> vehicles) {
+		this.vehicles = vehicles;
+	}
+
+	public Long getId() {
         return id;
     }
     

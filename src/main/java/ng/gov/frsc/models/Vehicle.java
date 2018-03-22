@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Vehicle {
+public class Vehicle extends Model {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "enhanced_table_seq_gen")

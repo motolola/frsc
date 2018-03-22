@@ -1,17 +1,38 @@
 package ng.gov.frsc.controllers;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import ng.gov.frsc.models.Model;
+import ng.gov.frsc.models.User;
+import ng.gov.frsc.models.Vehicle;
+import ng.gov.frsc.services.UserService;
+import ng.gov.frsc.services.VehicleService;
 
 @Controller
 public class VehicleController {
 	
+	@Autowired
+    private UserService userService;
+	@Autowired
+	private VehicleService vehicleService;
+	
 	 @GetMapping("/vehicle/vehicles")
-	 public String myVehicles() {
+	 public String myVehicles(ModelMap map) {
+		 User user = userService.getLoggedInUser();
+		 List<Vehicle> vehicles = user.getVehicles();
+		 map.addAttribute("vehicles", vehicles);
 	    	 return "vehicle/list";
 	 }
-	@GetMapping("/vehicle/vehicle-detail")
-	public String vehicleDetail() {
+	@GetMapping("/vehicle/vehicle-detail/{id}")
+	public String vehicleDetail(@PathVariable("id") Long id, ModelMap map) {
+		Vehicle vehicle = vehicleService.get(id);
+		map.addAttribute("vehicle", vehicle);
 	    	 return "vehicle/details";
 	}
 
