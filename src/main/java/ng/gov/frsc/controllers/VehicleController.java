@@ -36,8 +36,11 @@ public class VehicleController {
 	@GetMapping("/vehicle/vehicle-detail/{id}")
 	public String vehicleDetail(@PathVariable("id") Long id, ModelMap map) {
 		Vehicle vehicle = vehicleService.get(id);
-		map.addAttribute("vehicle", vehicle);
+		if (vehicle != null) {
+		
 	    	 return "vehicle/details";
+		}
+		return "vehicle/list"; 
 	}
 	
 	@GetMapping("vehicle/add")
