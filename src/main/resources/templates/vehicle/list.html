@@ -19,9 +19,19 @@
 				  <div class="col-sm-4">
 				  
 				  <table class="table">
+				     <tr>
+				      <th>Registration Number</th>
+				      <th>Chassis Number</th>
+				      <th>Make</th>
+				      <th>Model</th>
+				      <th>Colour</th>
+				     </tr>
 					  <tr th:each="vehicle : ${vehicles}">
 				        <td th:text="${vehicle.regNumber}">...</td>
 				        <td th:text="${vehicle.chassisNumber}">...</td>
+				        <td th:text="${vehicle.make}">...</td>
+				        <td th:text="${vehicle.model}">...</td>
+				        <td th:text="${vehicle.colour}">...</td>
       				</tr>	
 				  </table>
 				  
