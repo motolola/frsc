@@ -22,8 +22,11 @@ import org.hibernate.validator.constraints.Email;
 
 
 @Entity
-@Table(name="app_user")
+@Table(name="\"user\"")
 public class User {
+    //@GeneratedValue
+    //@Id
+    //private Long id;
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "enhanced_table_seq_gen")
