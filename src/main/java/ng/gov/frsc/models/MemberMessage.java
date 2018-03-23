@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="member_message", schema = "frsc")
+@Table(name="member_message")
 public class MemberMessage {
 	 //@GeneratedValue
 	   // @Id
