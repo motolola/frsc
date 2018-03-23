@@ -25,14 +25,17 @@
 				      <th>Make</th>
 				      <th>Model</th>
 				      <th>Colour</th>
+				      <th></th>
 				     </tr>
+				     
 					  <tr th:each="vehicle : ${vehicles}">
 				        <td th:text="${vehicle.regNumber}">...</td>
 				        <td th:text="${vehicle.chassisNumber}">...</td>
 				        <td th:text="${vehicle.make}">...</td>
 				        <td th:text="${vehicle.model}">...</td>
 				        <td th:text="${vehicle.colour}">...</td>
-      				</tr>	
+				        <td><a th:href="@{'/vehicle/detail/' + ${vehicle.id}}"><button class="btn btn-primary btn-sm"><i class="fa fa-binoculars" aria-hidden="true"></i> View</button></a></td>
+      				 </tr>	
 				  </table>
 				  
 				  </div>
@@ -43,7 +46,7 @@
 				</div>
 		  <div class="panel-footer">
 		  <div class="row">
-		  <div class="col-sm-6"><a href="/vehicle/add"><button class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Add Vehicle</button></a></div>
+		  <div class="col-sm-6"><a href="/vehicle/add"><button class="btn btn-primary btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Add a new vehicle</button></a></div>
 		  <div class="col-sm-6"></div>
 		  </div>
 		  

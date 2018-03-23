@@ -20,10 +20,10 @@
 				  
 				  <table class="table">
 				 
-					  <tr><th>Registration Number</th><td>SE456KJA</td></tr>
-					  <tr><th>Make</th><td>Toyota</td></tr>
-					  <tr><th>Model</th><td>Corolla, 2010</td></tr>
-					  <tr><th>Chassis Number</th><td>535367772766</td></tr>
+					  <tr><th>Registration Number</th><td th:text="${vehicle.regNumber}">SE456KJA</td></tr>
+					  <tr><th>Make</th><td th:text="${vehicle.make}">Toyota</td></tr>
+					  <tr><th>Model</th><td th:text="${vehicle.model}">Corolla, 2010</td></tr>
+					  <tr><th>Chassis Number</th><td th:text="${vehicle.chassisNumber}">535367772766</td></tr>
 					  <tr><th>Imported</th><td>Yes</td></tr>
 					  <tr><th>Number of seat</th><td>5</td></tr>
 					  <tr><th>MOT validity</th><td>Yes</td></tr>

@@ -29,19 +29,16 @@ public class VehicleController {
 	 @GetMapping("/vehicle/vehicles")
 	 public String myVehicles(ModelMap map) {
 		 User user = userService.getLoggedInUser();
-		 //List<Vehicle> vehicles = user.getVehicles();
 		 List<Vehicle> vehicles = vehicleService.findByUse(user);
-		 //System.out.println(user.toString());
 		 map.addAttribute("vehicles", vehicles);
 	    	 return "vehicle/list";
 	 }
-	@GetMapping("/vehicle/vehicle-detail/{id}")
+	@GetMapping("/vehicle/detail/{id}")
 	public String vehicleDetail(@PathVariable("id") Long id, ModelMap map) {
 		Vehicle vehicle = vehicleService.get(id);
 		if (vehicle != null) {
 			
-			
-		
+			map.addAttribute("vehicle", vehicle);
 	    	 return "vehicle/details";
 		}
 		return "vehicle/list"; 
