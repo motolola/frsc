@@ -40,7 +40,6 @@ import ng.gov.frsc.services.MailService;
 import ng.gov.frsc.services.UserService;
 
 @Controller
-// @RequestMapping("/user/*")
 public class UserController {
     private Logger log = LoggerFactory.getLogger(UserController.class);
     
