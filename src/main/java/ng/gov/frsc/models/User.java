@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.Email;
 
 
 @Entity
-@Table(name="\"user\"")
+@Table(name="app_user")
 public class User {
     //@GeneratedValue
     //@Id
