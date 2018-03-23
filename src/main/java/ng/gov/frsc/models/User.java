@@ -1,5 +1,6 @@
 package ng.gov.frsc.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -8,6 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -66,15 +70,36 @@ public class User {
     
     private String profilePicture;
     
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+        name = "app_user_offence", 
+        joinColumns = { @JoinColumn(name = "app_user_id") }, 
+        inverseJoinColumns = { @JoinColumn(name = "offence_id") }
+    )
+    List<Offence> offences = new ArrayList<>();
     @OneToMany(
             mappedBy = "user", 
             cascade = CascadeType.ALL
         )
+    
     private List<Vehicle> vehicles;
     
     public List<Vehicle> getVehicles() {
 		return vehicles;
 	}
+    
+
+	public List<Offence> getOffences() {
+		return offences;
+	}
+
+
+
+	public void setOffences(List<Offence> offences) {
+		this.offences = offences;
+	}
+
+
 
 	public void setVehicles(List<Vehicle> vehicles) {
 		this.vehicles = vehicles;

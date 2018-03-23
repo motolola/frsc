@@ -17,7 +17,7 @@ public class LoadInitialData implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments arg0) throws Exception {
-		// TODO Auto-generated method stub
+		// If Application ENV is DEV
 		loadUsers();
 		
 	}
