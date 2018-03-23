@@ -1,8 +1,11 @@
 package ng.gov.frsc.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ng.gov.frsc.models.User;
 import ng.gov.frsc.models.Vehicle;
 import ng.gov.frsc.repositories.VehicleRepository;
 
@@ -33,5 +36,9 @@ public class VehicleService extends CrudService<Vehicle, VehicleRepository> {
 	 public Vehicle save(Vehicle vehicle) {
         return repo.save(vehicle);
     }
+	
+	public List<Vehicle> findByUse(User user) {
+		return repo.findByUser(user);
+	}
 
 }

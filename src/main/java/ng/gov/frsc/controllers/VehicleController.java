@@ -29,7 +29,8 @@ public class VehicleController {
 	 @GetMapping("/vehicle/vehicles")
 	 public String myVehicles(ModelMap map) {
 		 User user = userService.getLoggedInUser();
-		 List<Vehicle> vehicles = user.getVehicles();
+		 //List<Vehicle> vehicles = user.getVehicles();
+		 List<Vehicle> vehicles = vehicleService.findByUse(user);
 		 //System.out.println(user.toString());
 		 map.addAttribute("vehicles", vehicles);
 	    	 return "vehicle/list";
