@@ -1,6 +1,5 @@
 package ng.gov.frsc.models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -15,7 +14,6 @@ import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.apache.commons.io.filefilter.FalseFileFilter;
 import org.hibernate.annotations.GenericGenerator;
 
 import org.hibernate.validator.constraints.Email;
@@ -24,9 +22,7 @@ import org.hibernate.validator.constraints.Email;
 @Entity
 @Table(name="app_user")
 public class User {
-    //@GeneratedValue
-    //@Id
-    //private Long id;
+
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "enhanced_table_seq_gen")
