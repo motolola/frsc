@@ -1,5 +1,6 @@
 package ng.gov.frsc.models;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,26 +30,43 @@ public class Offence {
 	private int points;
 	private double penalty;
 	private int category;
+	private Date expiryDate;
 	
-	@ManyToMany(mappedBy = "offences")
-    private List<User> users = new ArrayList<>();
-	
-	
-	
-	public Offence(String infringement, String code, int points, double penalty, int category) {
+	public Offence(Long id, String infringement, String code, int points, double penalty, int category, Date expiryDate,
+			List<User> users) {
 		super();
+		this.id = id;
 		this.infringement = infringement;
 		this.code = code;
 		this.points = points;
 		this.penalty = penalty;
 		this.category = category;
+		this.expiryDate = expiryDate;
+		this.users = users;
 	}
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	@ManyToMany(mappedBy = "offences")
+    private List<User> users = new ArrayList<>();
+	
 	public Offence() {
 	}
 	@Override
 	public String toString() {
 		return "Offence [id=" + id + ", infringement=" + infringement + ", code=" + code + ", points=" + points
 				+ ", penalty=" + penalty + ", category=" + category + "]";
+	}
+	
+	
+	public List<User> getUsers() {
+		return users;
+	}
+	public void setUsers(List<User> users) {
+		this.users = users;
 	}
 	public Long getId() {
 		return id;
